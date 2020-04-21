@@ -1,0 +1,12 @@
+{
+    "name": "puppeteer-custom-transport",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/vatex/puppeteer-custom-transport.git",
+    "author": "Valeri Kuparashvili <valeri.developer@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "puppeteer": "~3.0.0",
+        "ws": "~7.2.3"
+    }
+}

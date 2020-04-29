@@ -31,13 +31,11 @@ class WSTransport {
 }
 
 wss.on('connection', (ws) => {
-    setTimeout(async () => {
-        const browser = await puppeteer.connect({
-            transport: new WSTransport(ws),
-            defaultViewport: null
-        });
+    const browser = await puppeteer.connect({
+        transport: new WSTransport(ws),
+        defaultViewport: null
+    });
 
-        const page = await browser.newPage();
-        await page.goto('https://www.google.com');
-    }, 2000);
+    const page = await browser.newPage();
+    await page.goto('https://www.google.com');
 });

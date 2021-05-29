@@ -30,7 +30,7 @@ class WSTransport {
     }
 }
 
-wss.on('connection', (ws) => {
+wss.on('connection', async (ws) => {
     const browser = await puppeteer.connect({
         transport: new WSTransport(ws),
         defaultViewport: null
